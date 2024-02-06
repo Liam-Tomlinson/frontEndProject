@@ -13,12 +13,11 @@ const ViewArticlesList = () =>
         .then((results) => setarticlesList(results))
      }, [])
 
-     console.log(articlesList[0])
    
     return (
        <div>
           {articlesList.map((item) => {
-        return <ArticlesCard item={item}/>
+        return <ArticlesCard key={item.article_id} item={item}/>
       }) } 
        </div>
       
@@ -28,8 +27,6 @@ const ViewArticlesList = () =>
 }
 
 
-// searchResults.map((item, index) => {
-//     return <ItemCard key={index} item={item}/>
 
 
 export default ViewArticlesList
