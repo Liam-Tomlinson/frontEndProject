@@ -8,9 +8,6 @@ const LikeButton = ({articleBody}) =>
     const [articleVotes, setArticleVotes] = useState(0);
     
 
-
-
-
     const voteUpClickHandler = (event) => {
 
         event.preventDefault()
