@@ -6,13 +6,19 @@ const ViewArticlesList = () =>
 {
 
     const [articlesList, setarticlesList] = useState([]);
+    const [isLoading, setIsLoading] = useState(true)
 
 
     useEffect(() => {
         getArticlesList()
-        .then((results) => setarticlesList(results))
+        .then((results) => {
+         setarticlesList(results)
+         setIsLoading(false)         
+        }) 
+        
      }, [])
 
+     if(isLoading) return <p >Please wait while we contact the database and load your content.</p>
    
     return (
        <div>
