@@ -3,6 +3,7 @@ import { getSingleArticle, getSingleComments } from '../../utils/apiRequests';
 import { useParams } from 'react-router-dom';
 import CommentsCard from './insideViewSingleArticle/CommentsCard';
 import LikeButton from './insideViewSingleArticle/LikeButton';
+import PostNewComment from './insideViewSingleArticle/postNewComment';
 
 const ViewSingleArticle = () => 
 {
@@ -22,9 +23,6 @@ const ViewSingleArticle = () =>
 
      }, [])
 
-     console.log(articleBody, '<-articlebody')
-
-    
 
     return <>
     <h1>{articleBody.title}</h1>
@@ -32,7 +30,8 @@ const ViewSingleArticle = () =>
     <h3>Written by {articleBody.author}</h3>
     <img src={articleBody.article_img_url} alt="article picture" />
     <p>{articleBody.body}</p> 
-    <h3 > View comments</h3>
+    <h3 >comments</h3>
+    <PostNewComment article_ID={article_ID}/>
     <div>
         {articleComments.map((item) => {
             return <CommentsCard key={item.comment_id} item={item} />

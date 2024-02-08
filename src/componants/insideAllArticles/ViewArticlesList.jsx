@@ -18,7 +18,7 @@ const ViewArticlesList = () =>
         
      }, [])
 
-     if(isLoading) return <p >Please wait while we contact the database and load your content.</p>
+     if(isLoading) return <p >Please wait while we contact the server and load your content. Please note that if the server has not been active for 15 minutes it may take upto 50 seconds for it to respond.</p>
    
     return (
        <div>

@@ -26,3 +26,7 @@ export const getSingleComments = (id) => {
 export const patchArticle = (articleId, updatedVote) => {  
     return newsApi.patch(`api/articles/${articleId}`, { inc_votes: updatedVote })
 }
+
+export const postComment = (searchTerm, article_ID) => {
+    return newsApi.post(`/api/articles/${article_ID}/comments`, {username: 'cooljmessy', body: searchTerm})  
+}
