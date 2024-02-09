@@ -11,7 +11,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+ 
 }
+
 
 a {
   font-weight: 500;
@@ -70,6 +73,26 @@ button:focus-visible {
 
   border-color: #646cff;
 }
+
+.div2 { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, 1fr); 
+  grid-column-gap: 20px;
+  grid-row-gap: 20px; 
+  
+  }
+
+  .div3 {
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #1c1b1b;
+    border-radius: 20%;
+    border-color: #646cff;
+    border: 3px, solid transparent;
+  
+  }
 
 
 

@@ -30,3 +30,14 @@ export const patchArticle = (articleId, updatedVote) => {
 export const postComment = (searchTerm, article_ID) => {
     return newsApi.post(`/api/articles/${article_ID}/comments`, {username: 'cooljmessy', body: searchTerm})  
 }
+
+export const getUsers = () => {
+    return newsApi.get(`/api/users`).then((response) => 
+    {
+        return response
+    })
+}
+
+export const deleteComments = (comment_Id) => {
+    return newsApi.delete(`/api/comments/${comment_Id}`)
+}
