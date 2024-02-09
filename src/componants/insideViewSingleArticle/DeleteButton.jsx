@@ -10,7 +10,7 @@ const DeleteButton = ({comment_Id, setisDeleted}) =>
         deleteComments(comment_Id)
     }
 
-    return <button onClick={deleteClickHandler}>Delete</button>
+    return <button style={{ backgroundColor: '#d42020', color: 'white' }} onClick={deleteClickHandler}>Delete</button>
 
 }
 
